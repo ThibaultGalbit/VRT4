@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: imagenode
+spec:
+  template:
+    metadata:
+      name: imagenode-pod
+    spec:
+      containers:
+      - name: imagenode
+        image: imagenode
+        imagePullPolicy: Never
+      restartPolicy: Never
